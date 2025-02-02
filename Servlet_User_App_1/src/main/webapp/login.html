@@ -1,16 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Log in page</title>
+    <meta charset="ISO-8859-1">
+    <title>Login Page - SBI Bank</title>
+    <style>
+        body {
+            background-image: url('https://www.sbi.co.in/documents/16012/14738362/Website-Banner.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input[type="text"], input[type="password"] {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #005BAC;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a {
+            display: block;
+            margin-top: 10px;
+            color: #005BAC;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-<form action = "log" method = "post">
-<label for ="uname">Enter user name </label><input type = "text" id ="uname" name = "uname"><br>
-<label for ="pword">Enter Your Password  </label><input type = "password" name = "pword"><br>
-<input type = "submit" value = "Login"><br>
-<a href="register.html"> NewUser?</a>
-</form>
-
+    <form action="log" method="post">
+        <h2>SBI Bank Login</h2>
+        <label for="uname">User Name</label>
+        <input type="text" id="uname" name="uname" required>
+        <label for="pword">Password</label>
+        <input type="password" id="pword" name="pword" required>
+        <input type="submit" value="Login">
+        <a href="register.html">New User? Register Here</a>
+    </form>
 </body>
 </html>
