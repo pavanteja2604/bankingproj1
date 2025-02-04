@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app>
-<welcome-file-list> <welcome-file>login.html</welcome-file></welcome-file-list>
 
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+             http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+    <display-name>Banking System</display-name>
+    
+    <!-- Servlet for adding customer -->
+    <servlet>
+        <servlet-name>AddCustomerServlet</servlet-name>
+        <servlet-class>com.mybankingproject.AddCustomerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCustomerServlet</servlet-name>
+        <url-pattern>/addCustomer</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet for creating an account -->
+    <servlet>
+        <servlet-name>CreateAccountServlet</servlet-name>
+        <servlet-class>com.mybankingproject.CreateAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateAccountServlet</servlet-name>
+        <url-pattern>/createAccount</url-pattern>
+    </servlet-mapping>
+
+    <!-- Servlet for handling transactions -->
+    <servlet>
+        <servlet-name>TransactionServlet</servlet-name>
+        <servlet-class>com.mybankingproject.TransactionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TransactionServlet</servlet-name>
+        <url-pattern>/transaction</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Servlet for login -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.mybankingproject.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
